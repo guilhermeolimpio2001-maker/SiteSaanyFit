@@ -19,6 +19,7 @@
     <nav class="top-nav">
       <a href="#sobre">Sobre</a>
       <a href="#combos">Combos</a>
+      <a href="#cardapio">Cardápio</a>
       <a href="#planos">Planos</a>
       <a href="#contato">Contato</a>
     </nav>
@@ -37,7 +38,7 @@
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contato">Peça Agora →</a>
-          <a class="btn btn-secondary" href="#combos">Ver Cardápio</a>
+          <a class="btn btn-secondary" href="#cardapio">Ver Cardápio</a>
         </div>
         <ul class="hero-list">
           <li>Nutrição personalizada com nutricionista</li>
@@ -118,34 +119,81 @@
         <span class="section-label">Tabela de Preços</span>
         <h2>Escolha o combo ideal para a sua semana</h2>
       </div>
-      <div class="price-table">
-        <div class="price-row price-row--header">
-          <span>Opção</span>
-          <span>Valor por Marmita</span>
-          <span>Valor Total</span>
+      <div class="combos-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🥗</div>
+          <h3>Combo Start</h3>
+          <p class="combo-desc">3 Marmitas - Perfeito para experimentar</p>
+          <div class="combo-price">
+            <span class="price-unit">R$ 24,90</span>
+            <span class="price-label">por marmita</span>
+          </div>
+          <div class="combo-total">Total: R$ 74,70</div>
         </div>
-        <div class="price-row">
-          <span> 🥗 Individual  </span>
-          <span>R$ 24,90</span>
-          <span>R$ 24,90</span>
+        <div class="combo-card">
+          <div class="combo-icon">👥</div>
+          <h3>Combo Bronze</h3>
+          <p class="combo-desc">5 Marmitas - Comece a semana com energia</p>
+          <div class="combo-price">
+            <span class="price-unit">R$ 22,90</span>
+            <span class="price-label">por marmita</span>
+          </div>
+          <div class="combo-total">Total: R$ 114,50</div>
         </div>
-        <div class="price-row">
-          <span> 🥗 Combo 5 Marmitas </span>
-          <span>R$ 22,90</span>
-          <span>R$ 114,50</span>
+        <div class="combo-card">
+          <div class="combo-icon">📦</div>
+          <h3>Combo Prata</h3>
+          <p class="combo-desc">10 Marmitas - Proteção completa para a semana</p>
+          <div class="combo-price">
+            <span class="price-unit">R$ 21,90</span>
+            <span class="price-label">por marmita</span>
+          </div>
+          <div class="combo-total">Total: R$ 219,00</div>
         </div>
-        <div class="price-row">
-          <span> 🥗 Combo 10 Marmitas </span>
-          <span>R$ 21,90</span>
-          <span>R$ 219,00</span>
-        </div>
-        <div class="price-row price-row--highlight">
-          <span> 🥗 Combo 20 Marmitas  </span>
-          <span>R$ 19,90</span>
-          <span>R$ 398,00</span>
+        <div class="combo-card combo-card--best">
+          <div class="combo-badge">⭐ Mais Popular</div>
+          <div class="combo-icon">🏆</div>
+          <h3>Combo Ouro</h3>
+          <p class="combo-desc">20 Marmitas - Máxima economia e resultados</p>
+          <div class="combo-price">
+            <span class="price-unit">R$ 19,90</span>
+            <span class="price-label">por marmita</span>
+          </div>
+          <div class="combo-total">Total: R$ 398,00</div>
         </div>
       </div>
       <p class="note">Pedido mínimo de 3 marmitas.</p>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section class="section section--light reveal" id="cardapio">
+      <div class="menu-section-header">
+        <span class="section-label">Cardápio Completo</span>
+        <h2>Exemplos de pratos do nosso cardápio</h2>
+        <p class="menu-subtitle">
+          Confira refeições reais e saborosas que preparamos para sua semana com atenção à nutrição e praticidade.
+        </p>
+      </div>
+
+      <ul class="menu-list">
+        <li><span class="menu-item-tag">⭐ Mais Pedido</span><span class="menu-item-icon">🍗</span><span class="menu-item-text">Strogonoff de frango com arroz integral</span></li>
+        <li><span class="menu-item-icon">🥦</span><span class="menu-item-text">Macarrão integral com brócolis</span></li>
+        <li><span class="menu-item-tag">🆕 Novo</span><span class="menu-item-icon">🍠</span><span class="menu-item-text">Escondidinho de batata doce com frango</span></li>
+        <li><span class="menu-item-icon">🥩</span><span class="menu-item-text">Escondidinho de mandioca com carne</span></li>
+        <li><span class="menu-item-tag">⭐ Mais Pedido</span><span class="menu-item-icon">🧀</span><span class="menu-item-text">Legumes gratinados com carne e purê de cabotiá</span></li>
+        <li><span class="menu-item-icon">🍲</span><span class="menu-item-text">Carne de panela com legumes e arroz integral</span></li>
+        <li><span class="menu-item-icon">🎃</span><span class="menu-item-text">Abóbora cabotiá, carne moída e brócolis</span></li>
+        <li><span class="menu-item-tag">🆕 Novo</span><span class="menu-item-icon">🐖</span><span class="menu-item-text">Carne suína com arroz integral e legumes</span></li>
+        <li><span class="menu-item-icon">🍗</span><span class="menu-item-text">Arroz integral com frango desfiado e brócolis</span></li>
+        <li><span class="menu-item-tag">⭐ Mais Pedido</span><span class="menu-item-icon">🍝</span><span class="menu-item-text">Macarrão de cenoura com molho à bolonhesa</span></li>
+        <li><span class="menu-item-icon">🥕</span><span class="menu-item-text">Purê de mandioquinha com legumes e carne moída</span></li>
+        <li><span class="menu-item-icon">🍽️</span><span class="menu-item-text">Purê de mandioca com frango</span></li>
+        <li><span class="menu-item-icon">🧈</span><span class="menu-item-text">Arroz integral à grega com frango desfiado e legumes na manteiga</span></li>
+        <li><span class="menu-item-icon">🥒</span><span class="menu-item-text">Lasanha de abobrinha</span></li>
+        <li><span class="menu-item-tag">🆕 Novo</span><span class="menu-item-icon">🍝</span><span class="menu-item-text">Macarrão de cenoura à bolonhesa</span></li>
+        <li><span class="menu-item-icon">🥒</span><span class="menu-item-text">Macarrão de abobrinha com frango</span></li>
+        <li><span class="menu-item-tag">⭐ Mais Pedido</span><span class="menu-item-icon">🥦</span><span class="menu-item-text">Mix de legumes na manteiga com carne desfiada</span></li>
+      </ul>
     </section>
 
     <!-- PLANOS -->

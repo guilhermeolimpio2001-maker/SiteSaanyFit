@@ -279,6 +279,33 @@
       border: 2px solid rgba(236,107,31,.07);
     }
 
+    #cardapio {
+      position: relative;
+      overflow: hidden;
+    }
+    #cardapio::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 20%, rgba(236,107,31,.12), transparent 24%),
+        radial-gradient(circle at 80% 18%, rgba(47,107,45,.14), transparent 18%),
+        radial-gradient(circle at 50% 75%, rgba(236,107,31,.08), transparent 22%);
+      pointer-events: none;
+    }
+    #cardapio::after {
+      content: '';
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: rgba(47,107,45,.08);
+      top: 10%;
+      left: -60px;
+      filter: blur(10px);
+      pointer-events: none;
+    }
+
     .section--accent {
       background: linear-gradient(135deg, #e8f5e9 0%, #fff9e6 50%, #ffe0cc 100%);
       border-radius: 40px;
@@ -377,6 +404,103 @@
       max-width: 720px;
       margin: 0 auto;
     }
+    .combos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .combo-card {
+      background: #fff;
+      border-radius: 28px;
+      padding: 32px 24px;
+      text-align: center;
+      border: 2px solid rgba(36,48,40,.08);
+      box-shadow: 0 12px 32px rgba(36,48,40,.08);
+      transition: all .28s cubic-bezier(.4,0,.2,1);
+      position: relative;
+    }
+    .combo-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(236,107,31,.25);
+      box-shadow: 0 18px 48px rgba(36,48,40,.12);
+    }
+    .combo-card--best {
+      border: 2px solid var(--primary);
+      background: linear-gradient(135deg, rgba(236,107,31,.06) 0%, #fff 100%);
+    }
+    .combo-card--best:hover {
+      box-shadow: 0 20px 50px rgba(236,107,31,.2);
+    }
+    .combo-badge {
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 7px 14px;
+      border-radius: 999px;
+      letter-spacing: .05em;
+      box-shadow: 0 4px 14px rgba(255,107,107,.22);
+    }
+    .combo-icon {
+      font-size: 3.2rem;
+      margin: 12px 0 16px;
+      display: block;
+    }
+    .combo-card--best .combo-icon {
+      font-size: 3.6rem;
+    }
+    .combo-card h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.6rem;
+      color: #1e3221;
+      margin: 8px 0 6px;
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .combo-desc {
+      color: #46584b;
+      font-size: .95rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      min-height: 2.8em;
+    }
+    .combo-price {
+      background: rgba(236,107,31,.08);
+      border-radius: 16px;
+      padding: 16px 12px;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .combo-card--best .combo-price {
+      background: linear-gradient(135deg, rgba(236,107,31,.12), rgba(47,107,45,.08));
+    }
+    .price-unit {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+    .price-label {
+      font-size: .8rem;
+      color: #556953;
+      font-weight: 600;
+    }
+    .combo-total {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 1.08rem;
+      color: #2e4331;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+
     .price-row {
       display: grid;
       grid-template-columns: 1.5fr 1fr 1fr;
@@ -419,6 +543,99 @@
       font-size: .85rem;
       font-weight: 600;
       color: #556953;
+    }
+
+    .menu-section-header {
+      max-width: 720px;
+      margin: 40px auto 0;
+      text-align: center;
+    }
+    .menu-section-header h3 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      color: #1e3221;
+      margin: 12px auto 10px;
+      line-height: 1.15;
+      font-weight: 600;
+    }
+    .menu-subtitle {
+      color: #46584b;
+      font-size: 1rem;
+      line-height: 1.7;
+      max-width: 52ch;
+      margin: 0 auto;
+    }
+    .menu-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin: 24px auto 0;
+      max-width: 740px;
+      list-style: none;
+      padding: 0;
+    }
+    .menu-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      background: #fff;
+      border: 1px solid rgba(36,48,40,.1);
+      border-radius: 24px;
+      padding: 18px 22px;
+      color: #2e4331;
+      box-shadow: 0 18px 36px rgba(36,48,40,.08);
+      font-size: .96rem;
+      line-height: 1.6;
+      transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+    }
+    .menu-list li:nth-child(odd) {
+      background: linear-gradient(140deg, rgba(255,248,238,.95), #fff);
+      border-color: rgba(236,107,31,.18);
+    }
+    .menu-list li:nth-child(even) {
+      background: linear-gradient(140deg, rgba(235,247,236,.95), #fff);
+      border-color: rgba(47,107,45,.14);
+    }
+    .menu-list li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 22px 42px rgba(36,48,40,.12);
+    }
+    .menu-item-icon {
+      width: 46px;
+      height: 46px;
+      min-width: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(236,107,31,.16), rgba(47,107,45,.08));
+      color: var(--primary-dark);
+      font-size: 1.25rem;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.35);
+      flex-shrink: 0;
+    }
+    .menu-item-text {
+      display: block;
+      color: #243028;
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+    .menu-item-tag {
+      display: inline-block;
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      background: linear-gradient(135deg, #ff9f43 0%, #ff6b6b 100%);
+      color: #fff;
+      font-size: .65rem;
+      font-weight: 700;
+      padding: 5px 10px;
+      border-radius: 999px;
+      letter-spacing: .04em;
+      box-shadow: 0 4px 12px rgba(255,107,107,.2);
+    }
+    .menu-list li {
+      position: relative;
     }
 
     /* planos */
